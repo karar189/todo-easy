@@ -6,7 +6,7 @@ function TodoList() {
 
   useEffect(() => {
     // Fetch initial to-do items from the backend
-    fetch("http://localhost:5000/api/todos")
+    fetch("https://todoserver-vodk.onrender.com/api/todos")
       .then((response) => response.json())
       .then((data) => setTodos(data));
   }, []);
@@ -17,7 +17,7 @@ function TodoList() {
 
   const addTodo = () => {
     // Send a POST request to the backend to add a new to-do item
-    fetch("http://localhost:5000/api/todos", {
+    fetch("https://todoserver-vodk.onrender.com/api/todos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
